@@ -9,7 +9,7 @@ Django, djangorestframework, djangorestframework-simplejwt, celery, django-celer
 pillow, psycopg2-binary, python-dotenv, redis, django-cors-headers, drf-yasg
 
 Инструкция для развертывания проекта:
-1. Клонировать проект: https://github.com/juliana6k6/project7.drf
+1. Клонировать проект: https://github.com/Dushe4ka/Atomic_Habits
 2. Создать виртуальное окружение. Для этого в терминале запустить команды:
 python -m venv source venv/bin/activate
 3. Установить зависимости. Для установки всех зависимостей в терминале запустить команду:
@@ -19,7 +19,7 @@ CREATE DATABASE database_name
 5. Создать и применить миграции. Для этого в терминале введите команды:
 python3 manage.py makemigrations
 python3 manage.py migrate
-6. Заполнить файл .env по образцу env_example.
+6. Заполнить файл .env по образцу .env.sample
 7. Cоздать суперпользователя. Для этого необходимо применить команду:
 python3 manage.py csu
 8. Запустить проект через следующую команду:
@@ -37,7 +37,7 @@ Celery worker и Celery beat будут совместно работать дл
 11. Документация API:
 Swagger http://127.0.0.1:8000/docs/
 Redoc http://127.0.0.1:8000/redoc/
-12. 
+
 Задача проекта.
 
 Добавьте необходимые модели привычек. Реализуйте эндпоинты для работы с фронтендом.
