@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     "django_celery_beat",
     "drf_yasg",
     "corsheaders",
-
     "habits",
     "users",
 ]
@@ -102,11 +101,11 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.getenv("NAME"),
-        "USER": os.getenv("USER"),
-        "PASSWORD": os.getenv("PASSWORD"),
-        "HOST": os.getenv("HOST"),
-        "PORT": os.getenv("PORT"),
+        "NAME": os.getenv("POSTGRES_DB"),
+        "USER": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
+        "HOST": os.getenv("POSTGRES_HOST"),
+        "PORT": os.getenv("POSTGRES_PORT"),
     }
 }
 
@@ -178,12 +177,8 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 
 CELERY_BEAT_SCHEDULE = {
     'check_last_login': {
-        'task': 'materials.tasks.check_last_login',
-        'schedule': timedelta(days=1),
-    },
-    'send_course_update_info': {
-        'task': 'materials.tasks.send_course_update_info',
-        'schedule': timedelta(hours=4),
+        'task': 'habits.tasks.send_habit_reminder',
+        'schedule': timedelta(minutes=1),
     },
 }
 

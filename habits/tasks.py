@@ -8,7 +8,7 @@ from habits.services import send_telegram_message
 def create_meassage(habit):
     """Функция для создания сообщения"""
     if habit.reward:
-        text_reward = f"После этого я огу {habit.reward}"
+        text_reward = f"После этого я могу {habit.reward}"
     else:
         text_reward = f"После этого я могу {habit.related_habit.action}"
         message = (
