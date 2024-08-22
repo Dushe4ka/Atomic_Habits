@@ -2,7 +2,7 @@
 Автор: Голубинец П.Ю.
 
 Технологии:
-python 3.12, postgresql, Redis, API
+python 3.12, postgresql, Redis, API, Docker, Docker-compose
 
 Используемые библиотеки:
 Django, djangorestframework, djangorestframework-simplejwt, celery, django-celery-beat,
@@ -37,6 +37,8 @@ Celery worker и Celery beat будут совместно работать дл
 11. Документация API:
 Swagger http://127.0.0.1:8000/docs/
 Redoc http://127.0.0.1:8000/redoc/
+12. Запуск Docker-compose командой - docker-compose up -d --build
+Остановка docker-compose командой - docker-compose stop
 
 Задача проекта.
 
